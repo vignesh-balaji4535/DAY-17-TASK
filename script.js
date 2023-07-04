@@ -1,36 +1,22 @@
-function renderCardData(response){
-  let newarray=[];
-let cardContainer=document.getElementById('card');
-if(response.length>0){
-response.forEach(ele => {
-    const card=`
-    <div  style="width: 18rem; ">
-    <div><h4 class="card-title">${ele.name.common}</h4></div>
-
-    <img src="${ele.flags.png}" class="card-img-top" alt="${ele.flags.alt}">
-    <div class="card-body">
-      <h2 class="card-title" >Capital : ${ele.capital}</h2>
-      <h2 class="card-title">Region : ${ele.region}</h2>
-      <h2 class="card-title">Country Code : ${ele.fifa}</h2>
-     
-      <a href="#" class="btn btn-primary">Click for Weather</a>
-      </div>
-    </div>`;
-  newarray.push(card)
-    cardContainer.innerHTML=newarray
-    
-    
-});
-
-
-
-}
-}
-
-
 function printData(data){
-    console.log(data);
-renderCardData(data)
+    let cardContainer=document.getElementById('card')
+    cardContainer.innerHTML=''
+    data.forEach((ele)=>{
+      cardContainer.innerHTML+=`
+    <div class=" card col-lg-4 col-sm-12 m-3 " style="width: 25rem;">
+    <h3 class="card-title" >${ele.name.common}</h3>
+    <div class="card-body">
+  <img src="${ele.flags.png}" class="card-img-top" alt="${ele.flags.alt}">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Capital : ${ele.capital}</li>
+    <li class="list-group-item">Region : ${ele.region}</li>
+    <li class="list-group-item">Country Code : ${ele.fifa}</li>
+    <li class="list-group-item"> <a href="#" class="btn btn-primary">Click for Weather</a> </li>
+   
+  </ul>
+  </div>
+</div>`
+    })
 }
 
 let url=`https://restcountries.com/v3.1/all`;

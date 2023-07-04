@@ -1,28 +1,34 @@
-h1,h2,h3,h5,h6{
-    font-weight:100;
-    font-size:small !important;
- }
- 
- h4{
-     font-weight:300;
-     font-size:smaller !important;
-     background-color: black;
-     color: white !important;
-     text-align: center;
-     padding: 8px;
-     border-radius: 5px;
-     margin: 2px;
- }
- .card{
-     max-height: 100%;
-     max-width: 100%;
- }
- #card{
-     display: flex;
-     flex-wrap: wrap;
- }
- img{
-     height: 150px !important;
- }
+.container{
+    background-color: rgb(53, 91, 195) !important;
+}
+
+h1{
+    background-color: black !important;
+    color: white !important;
+}
+img{
+    height: 200px;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+h3{
+    color: white !important;
+    background-color: black !important;
+    border-radius: 5px;
+    margin-top: 4px !important;
+    padding: 5px;
+}
+ul{
+    border-radius: 5px !important;
+}
+ul li{
+    background-color: rgb(70, 69, 69) !important;
+    color: rgb(228, 227, 227) !important;
+    font-weight: 450;
+    font-size: 22px !important
+}
+.card{
+    background-color:rgb(226, 225, 225) !important;
+}
  
  
